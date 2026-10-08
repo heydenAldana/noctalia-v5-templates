@@ -1,6 +1,8 @@
-# Noctalia Installation Guide Using **xbps-src**
+# Noctalia Installation Guide Using **xbps-src** for **VOID LINUX**
 
-Just to clarify, I wrote this myself. NO AI WAS USED TO WRITE THIS UP on a Wednesday afternoon.
+Just to clarify: 
+1. This is only for VOID LINUX (Idk if this works on Neko Void Linux as well)
+2. I wrote this myself. NO AI WAS USED TO WRITE THIS UP on a Wednesday afternoon.
 
 ## 1. Overview
 
