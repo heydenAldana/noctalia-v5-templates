@@ -27,7 +27,7 @@ $ xbps-query -Rs noctalia
 ## 2. About the templates
 On this repo I provide 2 templates:
 1. **noctalia** template with all its necessary dependencies (check the [BUILDING.md](https://github.com/noctalia-dev/noctalia/blob/main/BUILDING.md) page in case there is anything missing, since it is being updated often and sometimes dependencies can be changed, added or removed).
-2. **nlohmann-json** template which is a necessary dependency and it is not available in he official repos (as fa as i am aware of):
+2. **nlohmann-json** template which is a necessary dependency and it is not available in he official repos (*as far as i am aware of*):
 ```Bash
 $ xbps-query -Rs nlohmann-json
 # Should appear something here
@@ -47,13 +47,13 @@ cd void-packages/
 ./xbps-src binary-bootstrap
 ```
 
-Step 2: Once you¿re done, check if, by any chance, they FINALLY added noctalia and nlohmann-json (_sometimes the names may vary, so double check just in case_):
+Step 2: Once you're done, check if, by any chance, they FINALLY added noctalia and nlohmann-json (_sometimes the names may vary, so double check just in case_):
 ```Bash
 ls /srcpkgs | grep noctalia
 ls /srcpkgs | grep nlohmann-json
 ```
 
-Step 3: Assuming both **don't exist**, let¿s create the nlohmann-json template and paste the template content on it using your preferred editor, or you can also download my template and use it:
+Step 3: Assuming both **don't exist**, let's create the nlohmann-json template and paste the template content on it using your preferred editor, or you can also download my template and use it:
 ```Bash
 # The touch command will create the file if it doesn't exist
 # You can also download the template here and use it, it should work
@@ -117,7 +117,7 @@ sudo xbps-pkgdb -m repounlock noctalia
 ---
 ## 4. FAQ
 1. **Why don't you just upload this in the official void-packages repos?**
-Honestly, i don't want to deal with all the process of approval and thia and that. I am not a maintainer, but i felt this would help the void community in case they still want to use noctalia shell.
+Honestly, i don't want to deal with all the process of approval and thia and that. I am not a maintainer, but i felt this would help the void community in case they still want to use noctalia shell. Also, someone else already made a PR to add this template as far as i've checked a few hours ago.
 2. **Will you keep these templates updated?**
  As long as they upload more updates and if i check on them, i would do it since it is just about changing the version and checksum inside the template files, something that you can do yourself too. That's why i am teaching you how to do this.
  3. **What if this is taken down?**
