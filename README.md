@@ -1,8 +1,11 @@
 # Noctalia Installation Guide Using **xbps-src** for **VOID LINUX**
 
+This has been updated on October 24th 2026, we are currently on v5.3.0, see [releases](https://github.com/noctalia-dev/noctalia/releases)
+
 Just to clarify: 
 1. This is only for VOID LINUX (Idk if this works on Neko Void Linux as well)
 2. I wrote this myself. NO AI WAS USED TO WRITE THIS UP on a Wednesday afternoon.
+3. I AM NOT A MAINTAINER NOR THE CREATOR OF NOCTALIA (sounds stupid but just for any misunderstandings)
 
 ## 1. Overview
 
@@ -89,7 +92,10 @@ Step 8: Build the package. Please note that:
 	* **Tip**: you can try the first time and it will fail showing you the hash in console, then you copy it and put in the the checksum section in the template, save it and then try to build it again)
 * You will need around 3-6 GB of RAM available when compiling this, so make sure you got enough RAM + Swap available in your computer.
 ```Bash
+# Generic build
 ./xbps-src pkg noctalia
+# CPU-Native build (not able to distribute to other distros)
+./xbps-src -o native pkg noctalia 
 ```
 
 Step 9: once the package is built, and if your computer is still alive, you will proceed to install it. Both of them will work fine, choose whatever suits you best:
