@@ -1,16 +1,33 @@
 # Template file for 'noctalia'
 # 
 # CHECK THE LATEST RELEASE: https://github.com/noctalia-dev/noctalia/releases
-# UPDATE YOUR CHECKSUM:  
 pkgname=noctalia
-version=5.2.1
+version=5.3.0
 revision=1
 build_style=meson
-hostmakedepends="pkg-config wayland-devel cmake"
-makedepends="meson ninja pkg-config git wayland-devel wayland-protocols libepoxy-devel MesaLib-devel libglvnd-devel cairo-devel pango-devel fontconfig-devel freetype-devel harfbuzz-devel libxkbcommon-devel pipewire-devel wireplumber-devel libsecret-devel libsodium-devel libcurl-devel pam-devel libwebp-devel libjxl-devel libsndfile-devel basu-devel sdbus-c++-devel libmd4c-devel tomlplusplus-devel libical-devel json-c++ stb polkit-devel librsvg-devel libqalculate-devel libxml2-devel jemalloc-devel"
-short_desc="Sleek, customizable desktop shell crafted for Wayland"
-maintainer="NotSierra <$USER@localhost>"
+configure_args="--buildtype=release -Dtests=disabled
+ $(vopt_bool native native_optimizations)"
+hostmakedepends="pkg-config wayland-devel"
+makedepends="wayland-devel wayland-protocols libepoxy-devel MesaLib-devel
+ libglvnd-devel cairo-devel pango-devel fontconfig-devel freetype-devel
+ harfbuzz-devel libxkbcommon-devel pipewire-devel wireplumber-devel
+ libsecret-devel libsodium-devel libcurl-devel pam-devel libwebp-devel
+ libjxl-devel libsndfile-devel basu-devel sdbus-c++-devel libmd4c-devel
+ tomlplusplus-devel libical-devel json-c++ stb polkit-devel librsvg-devel
+ libqalculate-devel libxml2-devel"
+depends="git pipewire wireplumber"
+short_desc="A sleek, customizable desktop shell crafted for Wayland."
+maintainer="NotSierra <$USER@localhost.67>"
 license="MIT"
 homepage="https://github.com/noctalia-dev/noctalia"
-distfiles="https://github.com/noctalia-dev/noctalia/archive/refs/tags/v${version}.tar.gz"
-checksum=5418f6b759de96e56a4bbca809c5a4c60a8a9594bdf67ecb8c5a341f97c221d1
+distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
+checksum=7677b5d7da80cf89c7a8232de26d25380aa5fcaf34fb38abddd4fe7cb676161a
+
+build_options="native"
+desc_option_native="Optimize for this CPU (-march=native); binary not portable"
+
+if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
+	configure_args+=" -Djemalloc=disabled"
+else
+	makedepends+=" jemalloc-devel"
+fi
