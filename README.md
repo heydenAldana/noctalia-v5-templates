@@ -88,7 +88,7 @@ Step ~~67~~ 7: Fetch the required dependencies on it:
 ```
 
 Step 8: Build the package. Please note that:
-* The checksum i use is the one for the version **5.2.1**, so, when updating it, you will have to change the checksum in the noctalia template file, and you will be responsible for doing so. 
+* The checksum i use is the one for the version **5.4.0**, so, when updating it, you will have to change the checksum in the noctalia template file, and you will be responsible for doing so. 
 	* **Tip**: you can try the first time and it will fail showing you the hash in console, then you copy it and put in the the checksum section in the template, save it and then try to build it again)
 * You will need around 3-6 GB of RAM available when compiling this, so make sure you got enough RAM + Swap available in your computer.
 ```Bash
