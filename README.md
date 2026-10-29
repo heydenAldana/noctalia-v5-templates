@@ -1,6 +1,6 @@
 # Noctalia Installation Guide Using **xbps-src** for **VOID LINUX**
 
-This has been updated on October 24th 2026, we are currently on v5.3.0, see [releases](https://github.com/noctalia-dev/noctalia/releases)
+This template has been updated on October 28th 2026, we are currently on v5.4.0, see [releases](https://github.com/noctalia-dev/noctalia/releases)
 
 Just to clarify: 
 1. This is only for VOID LINUX (Idk if this works on Neko Void Linux as well)
@@ -29,7 +29,7 @@ $ xbps-query -Rs noctalia
 ---
 ## 2. About the templates
 On this repo I provide 2 templates:
-1. **noctalia** template with all its necessary dependencies (check the [BUILDING.md](https://github.com/noctalia-dev/noctalia/blob/main/BUILDING.md) page in case there is anything missing, since it is being updated often and sometimes dependencies can be changed, added or removed).
+1. **noctalia** template with all its necessary dependencies (check the [BUILDING.md](https://github.com/noctalia-dev/noctalia/blob/main/BUILDING.md) page in case there is anything missing, since it is being updated often and sometimes dependencies can be changed, added or removed). Also, i added the checksum for this version, don't worry about that.
 2. **nlohmann-json** template which is a necessary dependency and it is not available in he official repos (*as far as i am aware of*):
 ```Bash
 $ xbps-query -Rs nlohmann-json
