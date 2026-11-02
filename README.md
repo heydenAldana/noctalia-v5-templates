@@ -1,6 +1,6 @@
 # Noctalia Installation Guide Using **xbps-src** for **VOID LINUX**
 
-This template has been updated on October 28th 2026, we are currently on v5.4.0, see [releases](https://github.com/noctalia-dev/noctalia/releases)
+This template has been updated on November 1st 2026, we are currently on v5.4.1, see [releases](https://github.com/noctalia-dev/noctalia/releases)
 
 Just to clarify: 
 1. This is only for VOID LINUX (Idk if this works on Neko Void Linux as well)
@@ -15,16 +15,7 @@ At the end of this document, you should be able to:
 
 * Build noctalia from source for Void Linux using xbps-src
 * Install the noctalia package that was built before
-* Lock the package using [repolock](https://docs.voidlinux.org/xbps/advanced-usage.html) from xbps so it doesn't get replaced with the one from the official repos
-
-You may have noticed that noctalia in the official repos is outdated and somehow no one has taken the iniciative to update it as of yet (last time checked on October 7th 2026 it still appears as this:
-```Bash
-$ xbps-query -Rs noctalia                
-[-] noctalia-5.0.0.r2026.07.03.a0d8efc_1         Noctalia desktop shell
-[-] noctalia-greeter-0.0.1.r2026.07.03.3f4b973_1 Noctalia themed greeter for greetd
-[-] noctalia-qs-0.0.12_0                         Custom fork of Quickshell powering Noctalia Shell
-[-] noctalia-shell-4.7.7_1                       A sleek and minimal desktop shell thoughtfully crafted for Wayland, built with Qu...
-```
+* Lock the package using [repolock](https://docs.voidlinux.org/xbps/advanced-usage.html) from xbps so it doesn't get replaced with the one from the official repos`
 
 ---
 ## 2. About the templates
@@ -88,9 +79,9 @@ Step ~~67~~ 7: Fetch the required dependencies on it:
 ```
 
 Step 8: Build the package. Please note that:
-* The checksum i use is the one for the version **5.4.0**, so, when updating it, you will have to change the checksum in the noctalia template file, and you will be responsible for doing so. 
+* The checksum i use is for the version that is in the template. If you are updating the template yourself, you will be responsible to update the checksum. 
 	* **Tip**: you can try the first time and it will fail showing you the hash in console, then you copy it and put in the the checksum section in the template, save it and then try to build it again)
-* You will need around 3-6 GB of RAM available when compiling this, so make sure you got enough RAM + Swap available in your computer.
+* You will need around 2-4 GB of RAM available when compiling this, so make sure you got enough RAM + Swap available in your computer.
 ```Bash
 # Generic build
 ./xbps-src pkg noctalia
@@ -98,10 +89,8 @@ Step 8: Build the package. Please note that:
 ./xbps-src -o native pkg noctalia 
 ```
 
-Step 9: once the package is built, and if your computer is still alive, you will proceed to install it. Both of them will work fine, choose whatever suits you best:
+Step 9: once the package is built, and if your computer is still alive, you will proceed to install it:
 ```Bash
-# Using xbps-src with root privileges
-sudo ./xbps-src install noctalia
 # Using xbps as usual (YOU MUST BE INSIDE void-packages folder)
 sudo xbps-install --repository=hostdir/binpkgs noctalia
 ``` 
