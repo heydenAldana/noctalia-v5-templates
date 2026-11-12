@@ -1,6 +1,6 @@
 # Noctalia Installation Guide Using **xbps-src** for **VOID LINUX**
 
-This template has been updated on November 1st 2026, we are currently on v5.4.1, see [releases](https://github.com/noctalia-dev/noctalia/releases)
+This template has been updated on November 12th 2026, we are currently on v5.5.0, see [releases](https://github.com/noctalia-dev/noctalia/releases)
 
 Just to clarify: 
 1. This is only for VOID LINUX (Idk if this works on Neko Void Linux as well)
